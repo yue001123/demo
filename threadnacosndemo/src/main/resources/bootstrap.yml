@@ -1,0 +1,15 @@
+server:
+  port: 8010
+  # 应用名称（nacos会将该名称当做服务名称）
+spring:
+  application:
+    name: woniu-service
+  cloud:
+    nacos:
+      discovery:
+        namespace: public
+        server-addr: 192.168.56.10:8848
+      config:
+        server-addr: 192.168.56.10:8848
+        file-extension: yml
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.woniu.datasourcedemo.dao.UserDao">
+
+    <select id="getById" resultType="com.woniu.datasourcedemo.model.User">
+        select * from uc_user
+        where id = #{id}
+    </select>
+
+
+    <insert id="insertUserDs1">
+       insert into uc_user(name,age)values(#{name},#{age})
+    </insert>
+
+    <insert id="insertUserDs2">
+      insert into uc_user(name,age)values(#{name},#{age})
+    </insert>
+
+
+</mapper>
