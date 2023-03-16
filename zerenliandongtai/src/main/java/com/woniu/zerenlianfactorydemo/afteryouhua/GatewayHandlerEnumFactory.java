@@ -41,7 +41,7 @@ public class GatewayHandlerEnumFactory {
             // 根据全限定类名，加载并初始化该类，即会初始化该类的静态段
             Class<?> clazz = Class.forName(className);
             return (GatewayHandler) clazz.newInstance();
-        } catch (ClassNotFoundException | IllegalAccessException | InstantiationException e) {
+        } catch (Exception  e) {
             e.printStackTrace();
         }
         return null;
